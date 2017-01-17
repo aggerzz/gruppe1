@@ -3,44 +3,55 @@ package domain;
 import java.util.List;
 
 public class Kamp {
-	private Hold hjemmehold;
-	private Hold udehold;
-	private List<Maal> maal;
-	private List<Udvisning> udvisninger;
-
-	public Hold getHjemmehold() {
+	private int kampid;
+	private String hjemmehold;
+	private String udehold;
+	private int hjemmehold_maal;
+	private int hjemmehold_udvisning;
+	private int udehold_maal;
+	private int udehold_udvisning;
+	public int getKampid() {
+		return kampid;
+	}
+	public void setKampid(int kampid) {
+		this.kampid = kampid;
+	}
+	public String getHjemmehold() {
 		return hjemmehold;
 	}
-
-	public void setHjemmehold(Hold hjemmehold) {
+	public void setHjemmehold(String hjemmehold) {
 		this.hjemmehold = hjemmehold;
-		hjemmehold.setHjemme(true);
-
 	}
-
-	public Hold getUdehold() {
+	public String getUdehold() {
 		return udehold;
 	}
-
-	public void setUdehold(Hold udehold) {
+	public void setUdehold(String udehold) {
 		this.udehold = udehold;
-		udehold.setUde(true);
-
+	}
+	public int getHjemmehold_maal() {
+		return hjemmehold_maal;
+	}
+	public void setHjemmehold_maal(int hjemmehold_maal) {
+		this.hjemmehold_maal = hjemmehold_maal;
+	}
+	public int getHjemmehold_udvisning() {
+		return hjemmehold_udvisning;
+	}
+	public void setHjemmehold_udvisning(int hjemmehold_udvisning) {
+		this.hjemmehold_udvisning = hjemmehold_udvisning;
+	}
+	public int getUdehold_maal() {
+		return udehold_maal;
+	}
+	public void setUdehold_maal(int udehold_maal) {
+		this.udehold_maal = udehold_maal;
+	}
+	public int getUdehold_udvisning() {
+		return udehold_udvisning;
+	}
+	public void setUdehold_udvisning(int udehold_udvisning) {
+		this.udehold_udvisning = udehold_udvisning;
 	}
 
-	public List<Maal> getMaal() {
-		return maal;
-	}
-
-	public void setMaal(List<Maal> maal) {
-		this.maal = maal;
-	}
-
-	public List<Udvisning> getUdvisninger() {
-		return udvisninger;
-	}
-
-	public void setUdvisninger(List<Udvisning> udvisninger) {
-		this.udvisninger = udvisninger;
-	}
+	
 }

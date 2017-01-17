@@ -3,8 +3,10 @@ package domain;
 import java.sql.Time;
 
 public class Maal {
+	private Kamp kampid;
+	private Hold holdnavn;
 	private Time tid;
-	private Hold hold;
+	private int maal;
 
 	public Time getTid() {
 		return tid;
@@ -14,11 +16,29 @@ public class Maal {
 		this.tid = tid;
 	}
 
-	public Hold getHold() {
-		return hold;
+	public Kamp getKampid() {
+		return kampid;
 	}
 
-	public void setHold(Hold hold) {
-		this.hold = hold;
+	public void setKampid(Kamp kampid) {
+		this.kampid = kampid;
 	}
+
+	public Hold getHoldnavn() {
+		return holdnavn;
+	}
+
+	public void setHoldnavn(Hold holdnavn) {
+		this.holdnavn = holdnavn;
+	}
+
+	public int getMaal() {
+		return maal;
+	}
+
+	public void setMaal(int maal) {
+		this.maal = maal;
+	}
+
+	
 }
