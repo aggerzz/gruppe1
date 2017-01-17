@@ -40,24 +40,5 @@ public class KampRegProImpl implements KampRegProInterface {
 
 	}
 
-	@Override
-	public List<Hold> visHold(String holdnavn) {
-		// TODO Auto-generated method stub
-		public List<Hold> listHold() throws SQLException {
-			System.out.println("Liste over hold");
-			List<Postering> holdlist = new ArrayList<>();
-			start();
-			statement = connection.prepareStatement("select holdnavn from hold");
-			resultset = statement.executeQuery();
-
-			while (resultset.next()) {
-				String holdnavn = resultset.getString("holdnavn");
-								
-				Holdliste tmphold = new Holdliste(holdnavn);
-				holdlist.add(tmphold);
-			}
-			return holdlist;
-		}
-		return null;
-	}
+	
 }
