@@ -1,68 +1,44 @@
 package domain;
 
 public class Hold {
-	private boolean hjemme;
-	private boolean ude;
-	private String navn;
-	private int kampevundet;
-	private int kampetabt;
-	private int kampeuafgjort;
-	private int kampespillet;
+	
+	private int holdid;
+	private String holdnavn;
+	private int ligaid;
+	private Liga liganavn;
+	
 
-	public String getNavn() {
-		return navn;
+	public String getHoldnavn() {
+		return holdnavn;
 	}
 
-	public void setNavn(String navn) {
-		this.navn = navn;
+	public void setHoldnavn(String holdnavn) {
+		this.holdnavn = holdnavn;
 	}
 
-	public boolean isHjemme() {
-		return hjemme;
+	public int getHoldid() {
+		return holdid;
 	}
 
-	public void setHjemme(boolean hjemme) {
-		this.hjemme = hjemme;
+	public void setHoldid(int holdid) {
+		this.holdid = holdid;
 	}
 
-	public boolean isUde() {
-		return ude;
+	public int getLigaid() {
+		return ligaid;
 	}
 
-	public void setUde(boolean ude) {
-		this.ude = ude;
+	public void setLigaid(int ligaid) {
+		this.ligaid = ligaid;
 	}
 
-	public int getKampevundet() {
-		return kampevundet;
+	public Liga getLiganavn() {
+		return liganavn;
 	}
 
-	public void setKampevundet(int kampevundet) {
-		this.kampevundet = kampevundet;
+	public void setLiganavn(Liga liganavn) {
+		this.liganavn = liganavn;
 	}
 
-	public int getKampetabt() {
-		return kampetabt;
-	}
-
-	public void setKampetabt(int kampetabt) {
-		this.kampetabt = kampetabt;
-	}
-
-	public int getKampeuafgjort() {
-		return kampeuafgjort;
-	}
-
-	public void setKampeuafgjort(int kampeuafgjort) {
-		this.kampeuafgjort = kampeuafgjort;
-	}
-
-	public int getKampespillet() {
-		return kampespillet;
-	}
-
-	public void setKampespillet(int kampespillet) {
-		this.kampespillet = kampespillet;
-	}
-
+	
 }
