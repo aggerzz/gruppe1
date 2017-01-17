@@ -30,7 +30,6 @@ public class KampRegPro extends Application {
 		kamprapport.setOnAction(e -> {
 		});
 		
-		
 		Button opretkamp = new Button("Opret Kamp");
 		grid.add(opretkamp, 0, 2);
 		opretkamp.setOnAction(e -> {
