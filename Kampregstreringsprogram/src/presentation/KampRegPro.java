@@ -7,6 +7,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import presentation.LigaOversigt;
+import presentation.Main;
+import presentation.OpretKamp;
+import presentation.Sog;
 
 public class KampRegPro extends Application {
 
