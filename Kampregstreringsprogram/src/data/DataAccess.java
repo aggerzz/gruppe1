@@ -2,6 +2,7 @@ package data;
 
 
 import java.io.Closeable;
+// se mig
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
