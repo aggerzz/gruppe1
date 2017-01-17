@@ -3,7 +3,6 @@ package logic;
 import java.util.List;
 
 import data.KampData;
-import domain.Hold;
 import domain.Kamp;
 import domain.Liga;
 
