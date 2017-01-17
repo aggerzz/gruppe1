@@ -1,0 +1,28 @@
+.root{
+	-fx-background-image: url(thehandballmaster.png);
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: left;
+	-fx-background-size: stretch;
+	-fx-min-height: 200;
+	-fx-min-width: 200;
+	-fx-max-height: 500;
+	-fx-max-width: 500;
+}
+.label{
+	-fx-text-fill: black;
+	-fx-font-size: 20.0;
+}
+.textfield{
+	-fx-font-size: 20.0;
+	-fx-size: 20;
+}
+.button{
+	-fx-min-height: 50.0px;
+	-fx-min-width: 150.0px;
+	-fx-max-height: 200.0px;
+	-fx-max-width: 300.0px;
+	-fx-text-alignment: center;
+	-fx-background-color: #e23636;
+	-fx-text-fill: white;
+	-fx-border-color: #422727;
+}
