@@ -46,19 +46,24 @@ public class OpdaterKamp {
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 2, 0);
 		
-		Label lantal = new Label("Antal: ");
-		grid.add(lantal, 0, 1);
-		TextField tantal = new TextField();
-		grid.add(tantal, 1, 1);
-		Label ltid = new Label("Tid: ");
-		grid.add(ltid, 0, 2);
-		TextField ttid = new TextField();
-		grid.add(ttid, 2, 2);
-		Label lhold = new Label("Hold: ");
-		grid.add(lhold, 0, 3);
-		TextField thold = new TextField();
-		grid.add(thold, 3, 3);
-		
+		Label antal = new Label("Antal: ");
+		grid.add(antal, 0, 1);
+		TextField antalm = new TextField();
+		grid.add(antalm, 1, 1);
+		TextField antalu = new TextField();
+		grid.add(antalu, 2, 1);
+		Label tid = new Label("Tid: ");
+		grid.add(tid, 0, 2);
+		TextField tidm = new TextField();
+		grid.add(tidm, 1, 2);
+		TextField tidu = new TextField();
+		grid.add(tidu, 2, 2);
+		Label hold = new Label("Hold: ");
+		grid.add(hold, 0, 3);
+		TextField holdm = new TextField();
+		grid.add(holdm, 1, 3);
+		TextField holdu = new TextField();
+		grid.add(holdu, 2, 3);
 		//Knapper 
 		Button opretenkamp = new Button("OK");
 		grid.add(opretenkamp, 1, 8);
