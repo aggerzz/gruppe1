@@ -50,6 +50,13 @@ public class KampRegPro extends Application {
 			soeg.start(new Stage());
 		});
 		
+		Button opdaterkamp = new Button("Opdater Kampdata");
+		grid.add(opdaterkamp, 0, 4);
+		sog.setOnAction(e -> {
+			Sog soeg = new Sog();
+			soeg.start(new Stage());
+		});
+		
 		Scene scene = new Scene(border, 750, 550);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		kampregpro.setScene(scene);
