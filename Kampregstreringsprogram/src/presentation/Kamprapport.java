@@ -16,8 +16,6 @@ public class Kamprapport {
 			border.setCenter(grid);
 			grid.setAlignment(Pos.CENTER);
 			grid.setGridLinesVisible(true);
-
-			
 			
 			Scene scene = new Scene(border, 700, 500);
 			scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());

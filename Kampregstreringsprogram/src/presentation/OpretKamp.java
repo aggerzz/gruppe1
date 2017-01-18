@@ -68,7 +68,6 @@ public class OpretKamp {
 		grid.add(label_kampstatus, 0, 7);
 		TextField textfield_kampstatus = new TextField();
 		grid.add(textfield_kampstatus, 1, 7);
-
 		
 		//Knapper 
 		Button opretenkamp = new Button("OK");
