@@ -21,7 +21,7 @@ public class Sog {
 		grid.setAlignment(Pos.CENTER_LEFT);
 		grid.setGridLinesVisible(true);
 		
-		Label lsog = new Label("Søg på noget");
+		Label lsog = new Label("Søg på noget: ");
 		grid.add(lsog, 0, 0);
 		TextField tsog = new TextField();
 		grid.add(tsog, 1, 0);
