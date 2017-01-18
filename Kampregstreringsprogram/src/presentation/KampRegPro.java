@@ -50,7 +50,7 @@ public class KampRegPro extends Application {
 			soeg.start(new Stage());
 		});
 		
-		Scene scene = new Scene(border, 700, 500);
+		Scene scene = new Scene(border, 750, 550);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		kampregpro.setScene(scene);
 		kampregpro.show();
