@@ -5,6 +5,8 @@ import java.util.List;
 import data.KampData;
 import domain.Kamp;
 import domain.Liga;
+import domain.Maal;
+import domain.Udvisning;
 
 public class KampRegProImpl implements KampRegProInterface {
 	private KampData kam = new KampData();
@@ -37,6 +39,18 @@ public class KampRegProImpl implements KampRegProInterface {
 	public void opdaterLiga(Liga liga) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void opdaterMaal(Maal maal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void opdaterUdvisning(Udvisning udvisning) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
