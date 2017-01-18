@@ -12,10 +12,7 @@ public class KampRegProImpl implements KampRegProInterface {
 	private KampData kam = new KampData();
 
 	@Override
-	public Kamp opretKamp(String hjemmehold, String udehold) {
-		Kamp kamp = new Kamp();
-		kamp.setHjemmehold(hjemmehold);
-		kamp.setUdehold(udehold);
+	public Kamp opretKamp(Kamp kamp) {
 		boolean transaktionstatus = kam.gemKamp(kamp);
 		if(transaktionstatus == true)
 			return kamp;

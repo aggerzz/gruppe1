@@ -8,7 +8,7 @@ import domain.Maal;
 import domain.Udvisning;
 
 public interface KampRegProInterface {
-	public Kamp opretKamp(String hjemmehold, String udehold);
+	public Kamp opretKamp(Kamp kamp);
 	public void opdaterKamp(Kamp kamp);
 	public List<Kamp> visKampe(String holdnavn);
 	public void opdaterLiga(Liga liga);

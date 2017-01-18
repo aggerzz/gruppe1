@@ -6,25 +6,27 @@ import java.sql.SQLException;
 import domain.Kamp;
 
 public class KampData {
-	public boolean gemKamp(Kamp kamp){
+	public boolean gemKamp(Kamp kamp) {
 		return false;
 	}
-	public Kamp opretKamp(String hjemmehold, String udehold){
-		Kamp kamp = new Kamp();
-		try(DataAccess access = new DataAccess()){
-			try{
-				opretKamp(access, hjemmehold, udehold);
+
+	public Kamp opretKamp(Kamp kamp) {
+
+		try (DataAccess access = new DataAccess()) {
+			try {
+				opretKamp(access, kamp);
 				access.commit();
-			}catch(Exception e){
+			} catch (Exception e) {
 				access.rollback();
-				throw e; 
+				throw e;
 			}
 		}
 		return kamp;
 	}
-	public Kamp opretKamp(DataAccess access, String hjemmehold, String udehold){
-		Kamp kamp = new Kamp();
-		try(PreparedStatement statement = access.getConnection().prepareStatement("INSERT INTO kamp(kampid, hjemmehold, hjemmehold_maal, hjemmehold_udvisninger, udehold, udehold_maal, udehold_udvisninger, kampstatus) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");){
+
+	public Kamp opretKamp(DataAccess access, Kamp kamp) {
+		try (PreparedStatement statement = access.getConnection().prepareStatement(
+				"INSERT INTO kamp(kampid, hjemmehold, hjemmehold_maal, hjemmehold_udvisninger, udehold, udehold_maal, udehold_udvisninger, kampstatus) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");) {
 			statement.setInt(1, kamp.getKampid());
 			statement.setString(2, kamp.getHjemmehold());
 			statement.setInt(3, kamp.getHjemmehold_maal());
@@ -35,10 +37,9 @@ public class KampData {
 			statement.setInt(8, kamp.getKampstatus());
 			int antal = statement.executeUpdate();
 			System.out.println("Antal rækker berørt : " + antal);
-		}catch(SQLException e){
-			throw new RuntimeException("Noget gik galt", e); 
+		} catch (SQLException e) {
+			throw new RuntimeException("Noget gik galt", e);
 		}
-			return kamp; 
-		}
+		return kamp;
 	}
-
+}
