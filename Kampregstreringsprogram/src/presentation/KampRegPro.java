@@ -53,8 +53,8 @@ public class KampRegPro extends Application {
 		Button opdaterkamp = new Button("Opdater Kampdata");
 		grid.add(opdaterkamp, 0, 4);
 		sog.setOnAction(e -> {
-			Sog soeg = new Sog();
-			soeg.start(new Stage());
+			OpdaterKamp opdater = new OpdaterKamp();
+			opdater.start(new Stage());
 		});
 		
 		Scene scene = new Scene(border, 750, 550);
