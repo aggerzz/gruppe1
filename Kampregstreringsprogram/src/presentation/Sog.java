@@ -18,7 +18,7 @@ public class Sog {
 		// Grid
 		GridPane grid = new GridPane();
 		border.setCenter(grid);
-		grid.setAlignment(Pos.CENTER_LEFT);
+		grid.setAlignment(Pos.CENTER);
 		grid.setGridLinesVisible(true);
 		
 		Label lsog = new Label("Søg på noget: ");

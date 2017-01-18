@@ -16,7 +16,7 @@ public class LigaOversigt {
 		// Grid
 		GridPane grid = new GridPane();
 		border.setCenter(grid);
-		grid.setAlignment(Pos.CENTER_LEFT);
+		grid.setAlignment(Pos.CENTER);
 		grid.setGridLinesVisible(true);
 
 		// Label

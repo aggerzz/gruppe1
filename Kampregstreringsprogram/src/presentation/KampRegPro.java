@@ -18,7 +18,7 @@ public class KampRegPro extends Application {
 		
 		BorderPane border = new BorderPane();
 		GridPane grid = new GridPane();
-		grid.setAlignment(Pos.BASELINE_CENTER);
+		grid.setAlignment(Pos.CENTER);
 		border.setCenter(grid);
 
 		Button ligaoversigt = new Button("Ligaoversigt");
