@@ -22,29 +22,31 @@ public class OpretKamp {
 		grid.setAlignment(Pos.CENTER_LEFT);
 		grid.setGridLinesVisible(true);
 		
-		//Dato
-		Label ldato = new Label("Dato: ");
-		grid.add(ldato, 0, 0);
-		TextField tdato = new TextField();
-		grid.add(tdato, 1, 0);
-		
-		//Tid
-		Label ltid = new Label("Tid: ");
-		grid.add(ltid, 0, 1);
-		TextField ttid = new TextField();
-		grid.add(ttid, 1, 1);
-		
-		//Sted
-		Label lsted = new Label("Sted: ");
-		grid.add(lsted, 0, 2);
-		TextField tsted = new TextField();
-		grid.add(tsted, 1, 2);
+		//kampid
+		Label label_kampid = new Label("Kampid: ");
+		grid.add(label_kampid, 0, 0);
+		TextField textfield_kampid = new TextField();
+		grid.add(textfield_kampid, 1, 0);
 		
 		//Hjemmeholdet
-		Label lhjemmehold = new Label("Hjemmehold: ");
-		grid.add(lhjemmehold, 0, 3);
-		TextField thjemmehold = new TextField();
-		grid.add(thjemmehold, 1, 3);
+				Label lhjemmehold = new Label("Hjemmehold: ");
+				grid.add(lhjemmehold, 0, 1);
+				TextField thjemmehold = new TextField();
+				grid.add(thjemmehold, 1, 1);
+		
+		//hjemmehold mål
+		Label label_hjemmehold_maal = new Label("Hjemmehold Mål: ");
+		grid.add(label_hjemmehold_maal, 0, 2);
+		TextField textfield_hjemmehold_maal = new TextField();
+		grid.add(textfield_hjemmehold_maal, 1, 3);
+		
+		//hjemmehold udvisning
+		Label label_hjemmehold_udvisning = new Label("Hjemmehold udvisning: ");
+		grid.add(label_hjemmehold_udvisning, 0, 3);
+		TextField textfield_hjemmehold_udvisning = new TextField();
+		grid.add(textfield_hjemmehold_udvisning, 1, 2);
+		
+		
 		
 		//Udeholdet
 		Label ludehold = new Label("UdeHold: ");
@@ -52,7 +54,23 @@ public class OpretKamp {
 		TextField tudehold = new TextField();
 		grid.add(tudehold, 1, 4);
 		
-		
+		//udehold mål
+				Label label_udehold_maal = new Label("Udehold Mål: ");
+				grid.add(label_udehold_maal, 0, 5);
+				TextField textfield_udehold_maal = new TextField();
+				grid.add(textfield_udehold_maal, 1, 1);
+				
+				//udehold udvisning
+				Label label_udehold_udvisning = new Label("Udehold udvisning: ");
+				grid.add(label_udehold_udvisning, 0, 6);
+				TextField textfield_udehold_udvisning = new TextField();
+				grid.add(textfield_udehold_udvisning, 1, 2);
+		//Kampstatus
+				Label label_kampstatus = new Label("Kampstatus (0 ikke spillet | 1 igang | 2 færdig): ");
+				grid.add(label_kampstatus, 0, 7);
+				TextField textfield_kampstatus = new TextField();
+				grid.add(textfield_kampstatus, 1, 2);
+				
 		Button opretenkamp = new Button("OK");
 		grid.add(opretenkamp, 1, 5);
 		opretenkamp.setOnAction(e -> {
@@ -62,7 +80,7 @@ public class OpretKamp {
 		fortryd.setOnAction(e -> {
 		});
 
-		Scene scene = new Scene(border, 400, 400);
+		Scene scene = new Scene(border, 700, 500);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		opretkamp.setScene(scene);
 		opretkamp.show();
