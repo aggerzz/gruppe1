@@ -4,8 +4,8 @@ import java.util.List;
 
 import domain.Kamp;
 import domain.Liga;
-import src.domain.Maal;
-import src.domain.Udvisning;
+import domain.Maal;
+import domain.Udvisning;
 
 public interface KampRegProInterface {
 	public Kamp opretKamp(String hjemmehold, String udehold);
