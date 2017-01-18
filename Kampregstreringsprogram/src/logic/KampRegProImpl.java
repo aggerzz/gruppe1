@@ -13,6 +13,7 @@ public class KampRegProImpl implements KampRegProInterface {
 
 	@Override
 	public Kamp opretKamp(Kamp kamp) {
+		kam.opretKamp(kamp);
 		boolean transaktionstatus = kam.gemKamp(kamp);
 		if(transaktionstatus == true)
 			return kamp;
