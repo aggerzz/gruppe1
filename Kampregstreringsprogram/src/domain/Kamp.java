@@ -10,6 +10,8 @@ public class Kamp {
 	private int hjemmehold_udvisning;
 	private int udehold_maal;
 	private int udehold_udvisning;
+	private int kampstatus;
+	
 	public int getKampid() {
 		return kampid;
 	}
@@ -51,6 +53,12 @@ public class Kamp {
 	}
 	public void setUdehold_udvisning(int udehold_udvisning) {
 		this.udehold_udvisning = udehold_udvisning;
+	}
+	public int getKampstatus() {
+		return kampstatus;
+	}
+	public void setKampstatus(int kampstatus) {
+		this.kampstatus = kampstatus;
 	}
 
 	
