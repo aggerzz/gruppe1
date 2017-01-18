@@ -32,7 +32,7 @@ public class KampRegPro extends Application {
 		grid.add(kamprapport, 0, 1);
 		kamprapport.setOnAction(e -> {
 			Kamprapport rapport = new Kamprapport();
-			kamprapport.start(new Stage());
+			rapport.start(new Stage());
 		});
 		
 		
