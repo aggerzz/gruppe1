@@ -37,7 +37,7 @@ public class LigaOversigt {
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 8, 0);
 		
-		Scene scene = new Scene(border, 400, 400);
+		Scene scene = new Scene(border, 700, 500);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		ligaoversigt.setScene(scene);
 		ligaoversigt.show();
