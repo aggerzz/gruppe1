@@ -27,7 +27,7 @@ public class KampRegPro extends Application {
 			LigaOversigt liga = new LigaOversigt();
 			liga.start(new Stage());
 		});
-		
+		//TODO
 		Button kamprapport = new Button("Kamprapport");
 		grid.add(kamprapport, 0, 1);
 		kamprapport.setOnAction(e -> {
