@@ -31,6 +31,8 @@ public class KampRegPro extends Application {
 		Button kamprapport = new Button("Kamprapport");
 		grid.add(kamprapport, 0, 1);
 		kamprapport.setOnAction(e -> {
+			Kamprapport rapport = new Kamprapport();
+			kamprapport.start(new Stage());
 		});
 		
 		
