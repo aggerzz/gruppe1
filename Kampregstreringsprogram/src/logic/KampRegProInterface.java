@@ -14,4 +14,5 @@ public interface KampRegProInterface {
 	public void opdaterLiga(Liga liga);
 	public void opdaterMaal(Maal maal);
 	public void opdaterUdvisning(Udvisning udvisning);
+	public Liga visLiga_Oversigt(Liga liga);
 }

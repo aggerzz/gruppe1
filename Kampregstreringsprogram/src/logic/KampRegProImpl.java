@@ -53,5 +53,11 @@ public class KampRegProImpl implements KampRegProInterface {
 		
 	}
 
+	@Override
+	public Liga visLiga_Oversigt(Liga liga) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }
