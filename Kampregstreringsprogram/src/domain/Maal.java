@@ -4,7 +4,7 @@ import java.sql.Time;
 
 public class Maal {
 	private Kamp kampid;
-	private Hold holdnavn;
+	private String holdnavn;
 	private Time tid;
 	private int maal;
 
@@ -24,11 +24,11 @@ public class Maal {
 		this.kampid = kampid;
 	}
 
-	public Hold getHoldnavn() {
+	public String getHoldnavn() {
 		return holdnavn;
 	}
 
-	public void setHoldnavn(Hold holdnavn) {
+	public void setHoldnavn(String holdnavn) {
 		this.holdnavn = holdnavn;
 	}
 

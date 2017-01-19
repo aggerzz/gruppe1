@@ -1,11 +1,10 @@
 package domain;
 
 import java.sql.Time;
-import java.util.List;
 
 public class Udvisning {
 	private Kamp kampid;
-	private Hold holdnavn;
+	private String holdnavn;
 	private Time tid;
 	private int udvisning;
 	
@@ -22,10 +21,10 @@ public class Udvisning {
 	public void setKampid(Kamp kampid) {
 		this.kampid = kampid;
 	}
-	public Hold getHoldnavn() {
+	public String getHoldnavn() {
 		return holdnavn;
 	}
-	public void setHoldnavn(Hold holdnavn) {
+	public void setHoldnavn(String holdnavn) {
 		this.holdnavn = holdnavn;
 	}
 	public int getUdvisning() {
