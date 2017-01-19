@@ -7,34 +7,31 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import presentation.LigaOversigt;
-import presentation.OpretKamp;
-import presentation.Sog;
 
 public class KampRegPro extends Application {
 
-	public void start(Stage kampregpro) {
-		kampregpro.setTitle("Velkommen");
-		
+	@Override
+	public void start(Stage startint) {
+		startint.setTitle("Velkommen");
+
 		BorderPane border = new BorderPane();
 		GridPane grid = new GridPane();
-		grid.setAlignment(Pos.CENTER);
+		grid.setAlignment(Pos.BASELINE_CENTER);
 		border.setCenter(grid);
 
 		Button ligaoversigt = new Button("Ligaoversigt");
 		grid.add(ligaoversigt, 0, 0);
 		ligaoversigt.setOnAction(e -> {
-			LigaOversigt liga = new LigaOversigt();
-			liga.start(new Stage());
+			OpretKamp intkamp = new OpretKamp();
+			intkamp.start(new Stage());
 		});
-		//TODO
+		
 		Button kamprapport = new Button("Kamprapport");
 		grid.add(kamprapport, 0, 1);
 		kamprapport.setOnAction(e -> {
-			Kamprapport rapport = new Kamprapport();
-			rapport.start(new Stage());
+			OpretKamp intkamp = new OpretKamp();
+			intkamp.start(new Stage());
 		});
-		
 		
 		Button opretkamp = new Button("Opret Kamp");
 		grid.add(opretkamp, 0, 2);
@@ -46,20 +43,13 @@ public class KampRegPro extends Application {
 		Button sog = new Button("Søg");
 		grid.add(sog, 0, 3);
 		sog.setOnAction(e -> {
-			Sog soeg = new Sog();
-			soeg.start(new Stage());
+			OpretKamp intkamp = new OpretKamp();
+			intkamp.start(new Stage());
 		});
 		
-		Button opdaterkamp = new Button("Opdater Kampdata");
-		grid.add(opdaterkamp, 0, 4);
-		opdaterkamp.setOnAction(e -> {
-			OpdaterKamp opdater = new OpdaterKamp();
-			opdater.start(new Stage());
-		});
-		
-		Scene scene = new Scene(border, 750, 550);
+		Scene scene = new Scene(border);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
-		kampregpro.setScene(scene);
-		kampregpro.show();
+		startint.setScene(scene);
+		startint.show();
 	}
 }
