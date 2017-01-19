@@ -2,6 +2,7 @@ package presentation;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -19,12 +20,16 @@ public class Fejlvindue {
 	grid.setAlignment(Pos.CENTER);
 	grid.setGridLinesVisible(true);
 	
-	Label fejl1 = new Label("Der opstod en fejl. vær sikker på at du har udfyldt");
-	grid.add(fejl1, 0, 1);
-	Label fejl2 = new Label( "alle felter korrekt og prøv igen");
-	grid.add(fejl2, 0, 2);
+	Label lhjemmehold = new Label("Der opstod en fejl. \nVær sikker på at du har udfyldt \nalle felter korrekt og prøv igen");
+	grid.add(lhjemmehold, 0,0 );
 	
-	Scene scene = new Scene(border, 600, 150);
+	Button tilbage = new Button("Tilbage");
+	grid.add(tilbage, 0,1);
+	tilbage.setOnAction(e -> {
+		fejlvindue.close();
+	});
+	
+	Scene scene = new Scene(border, 650, 450);
 	scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 	fejlvindue.setScene(scene);
 	fejlvindue.show();
