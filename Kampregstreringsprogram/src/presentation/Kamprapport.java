@@ -20,7 +20,7 @@ public class Kamprapport {
 		grid.setGridLinesVisible(true);
 
 		Button sog = new Button("Søg");
-		grid.add(sog, 0, 4);
+		grid.add(sog, 0, 1);
 		sog.setOnAction(e -> {
 			Sog soeg = new Sog();
 			soeg.start(new Stage());
