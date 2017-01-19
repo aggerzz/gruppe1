@@ -1,5 +1,6 @@
 package presentation;
 
+import domain.Kamp;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,6 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import logic.KampRegProImpl;
+import logic.KampRegProInterface;
 
 public class OpretKamp {
 
@@ -73,6 +76,28 @@ public class OpretKamp {
 		Button opretenkamp = new Button("OK");
 		grid.add(opretenkamp, 1, 8);
 		opretenkamp.setOnAction(e -> {
+			try {
+				KampRegProInterface krpi = new KampRegProImpl();
+				Kamp kamp = new Kamp();
+				int idkamp = Integer.parseInt(textfield_kampid.getText());
+				kamp.setKampid(idkamp);
+				kamp.setHjemmehold(thjemmehold.getText());
+				int maalhjemmehold = Integer.parseInt(textfield_hjemmehold_maal.getText());
+				kamp.setHjemmehold_maal(maalhjemmehold);
+				int udvisninghjemmehold = Integer.parseInt(textfield_hjemmehold_udvisning.getText());
+				kamp.setHjemmehold_udvisning(udvisninghjemmehold);
+				kamp.setUdehold(tudehold.getText());
+				int maaludehold = Integer.parseInt(textfield_udehold_maal.getText());
+				kamp.setUdehold_maal(maaludehold);
+				int udvisningudehold = Integer.parseInt(textfield_udehold_udvisning.getText());
+				kamp.setUdehold_udvisning(udvisningudehold);
+				int statuskamp = Integer.parseInt(textfield_kampstatus.getText());
+				kamp.setKampstatus(statuskamp);
+				krpi.opretKamp(kamp);
+			} catch (NumberFormatException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		});
 		Button fortryd = new Button("Fortryd");
 		grid.add(fortryd, 0, 8);
