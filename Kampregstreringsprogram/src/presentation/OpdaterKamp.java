@@ -46,7 +46,7 @@ public class OpdaterKamp {
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 2, 0);
 
-		//Felter i center border y aksen
+		// Felter i center border y aksen
 		Label hjemmehold = new Label("Hjemmehold: ");
 		grid.add(hjemmehold, 0, 1);
 		TextField thjemmeholdmal = new TextField();
@@ -87,14 +87,14 @@ public class OpdaterKamp {
 		grid.add(gudvisning, 2, 8);
 		gudvisning.setOnAction(e -> {
 		});
-		Button gkamp = new Button("Gem Kamp");
-		grid.add(gkamp, 3, 9);
-		gkamp.setOnAction(e -> {
-		});
 		Button luk = new Button("Luk Vinduet");
-		grid.add(luk, 2, 9);
+		grid.add(luk, 1, 9);
 		luk.setOnAction(e -> {
 			opdaterkamp.close();
+		});
+		Button gkamp = new Button("Gem Kamp");
+		grid.add(gkamp, 2, 9);
+		gkamp.setOnAction(e -> {
 		});
 
 		Scene scene = new Scene(border, 700, 500);
