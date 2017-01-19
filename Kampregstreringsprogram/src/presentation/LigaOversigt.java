@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class LigaOversigt {
 	public void start(Stage ligaoversigt) {
 		ligaoversigt.setTitle("Liga Oversigt");
-		
+
 		// Border
 		BorderPane border = new BorderPane();
 		// Grid
@@ -37,13 +37,13 @@ public class LigaOversigt {
 		grid.add(lpoint, 7, 0);
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 8, 0);
-		
+
 		Button gkamp = new Button("Luk vinduet");
 		grid.add(gkamp, 9, 0);
 		gkamp.setOnAction(e -> {
 			ligaoversigt.close();
 		});
-		
+
 		Scene scene = new Scene(border, 700, 500);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		ligaoversigt.setScene(scene);
