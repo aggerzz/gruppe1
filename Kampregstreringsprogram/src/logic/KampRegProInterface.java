@@ -2,6 +2,7 @@ package logic;
 
 import java.util.List;
 
+import domain.Hold;
 import domain.Kamp;
 import domain.Liga;
 import domain.Maal;
@@ -14,5 +15,5 @@ public interface KampRegProInterface {
 	public void opdaterLiga(Liga liga);
 	public void opdaterMaal(Maal maal);
 	public void opdaterUdvisning(Udvisning udvisning);
-	public Liga visLiga_Oversigt(String liganavn);
+	public Hold visLiga_Oversigt(String liganavn);
 }

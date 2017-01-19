@@ -3,6 +3,7 @@ package logic;
 import java.util.List;
 
 import data.KampData;
+import domain.Hold;
 import domain.Kamp;
 import domain.Liga;
 import domain.Maal;
@@ -52,7 +53,7 @@ public class KampRegProImpl implements KampRegProInterface {
 	}
 
 	@Override
-	public Liga visLiga_Oversigt(String liganavn) {
+	public Hold visLiga_Oversigt(String liganavn) {
 		// TODO Auto-generated method stub
 		return null;
 	}

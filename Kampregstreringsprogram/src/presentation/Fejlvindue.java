@@ -19,10 +19,12 @@ public class Fejlvindue {
 	grid.setAlignment(Pos.CENTER);
 	grid.setGridLinesVisible(true);
 	
-	Label lhjemmehold = new Label("Der opstod en fejl. vær sikker på at du har udfyldt alle felter korrekt og prøv igen");
-	grid.add(lhjemmehold, 0, 1);
+	Label fejl1 = new Label("Der opstod en fejl. vær sikker på at du har udfyldt");
+	grid.add(fejl1, 0, 1);
+	Label fejl2 = new Label( "alle felter korrekt og prøv igen");
+	grid.add(fejl2, 0, 2);
 	
-	Scene scene = new Scene(border, 100, 200);
+	Scene scene = new Scene(border, 600, 150);
 	scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 	fejlvindue.setScene(scene);
 	fejlvindue.show();

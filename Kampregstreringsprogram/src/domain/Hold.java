@@ -5,7 +5,7 @@ public class Hold {
 	private int holdid;
 	private String holdnavn;
 	private int ligaid;
-	private Liga liganavn;
+	private String liganavn;
 	
 
 	public String getHoldnavn() {
@@ -32,11 +32,11 @@ public class Hold {
 		this.ligaid = ligaid;
 	}
 
-	public Liga getLiganavn() {
+	public String getLiganavn() {
 		return liganavn;
 	}
 
-	public void setLiganavn(Liga liganavn) {
+	public void setLiganavn(String liganavn) {
 		this.liganavn = liganavn;
 	}
 
