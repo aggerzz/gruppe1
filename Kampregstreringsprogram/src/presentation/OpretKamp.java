@@ -97,6 +97,8 @@ public class OpretKamp {
 			} catch (NumberFormatException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+				Fejlvindue fejlvindue = new Fejlvindue();
+				fejlvindue.start(new Stage());
 			}
 		});
 		Button fortryd = new Button("Fortryd");
