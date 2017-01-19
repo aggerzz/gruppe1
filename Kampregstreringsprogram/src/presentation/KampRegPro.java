@@ -52,4 +52,5 @@ public class KampRegPro extends Application {
 		startint.setScene(scene);
 		startint.show();
 	}
+	
 }

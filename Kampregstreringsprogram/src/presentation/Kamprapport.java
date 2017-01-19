@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+
 public class Kamprapport {
 	public void start(Stage kamprapport) {
 		kamprapport.setTitle("Kamprapport");
