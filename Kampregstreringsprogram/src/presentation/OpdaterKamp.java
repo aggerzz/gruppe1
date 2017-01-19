@@ -18,34 +18,34 @@ public class OpdaterKamp {
 		// Grid
 		GridPane grid = new GridPane();
 		border.setCenter(grid);
-		grid.setAlignment(Pos.CENTER);
-		grid.setGridLinesVisible(true);
+		grid.setAlignment(Pos.CENTER_RIGHT);
+//		grid.setGridLinesVisible(true);
 		GridPane gridtop = new GridPane();
 		border.setTop(gridtop);
 		gridtop.setAlignment(Pos.CENTER);
 
-		//Kampinfo
+		// Kampinfo
 		Label kampid = new Label("KampID:  ");
 		gridtop.add(kampid, 0, 0);
 		TextField tkampid = new TextField();
 		gridtop.add(tkampid, 1, 0);
-		
+
 		Label lhjem = new Label("Hjemmeholdet: ");
 		gridtop.add(lhjem, 0, 1);
 		TextField thjem = new TextField();
 		gridtop.add(thjem, 1, 1);
-		
+
 		Label lude = new Label("Udeholdet: ");
 		gridtop.add(lude, 0, 2);
 		TextField tude = new TextField();
 		gridtop.add(tude, 1, 2);
-		
+
 		// Felter i center border og i grid griddet
 		Label lmal = new Label(" Mål ");
 		grid.add(lmal, 1, 0);
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 2, 0);
-		
+
 		Label antal = new Label("Antal: ");
 		grid.add(antal, 0, 1);
 		TextField antalm = new TextField();
@@ -64,14 +64,24 @@ public class OpdaterKamp {
 		grid.add(holdm, 1, 3);
 		TextField holdu = new TextField();
 		grid.add(holdu, 2, 3);
-		//Knapper 
-		Button opretenkamp = new Button("OK");
-		grid.add(opretenkamp, 1, 8);
-		opretenkamp.setOnAction(e -> {
+
+		// Knapper
+		Button gmal = new Button("Gem Mål");
+		grid.add(gmal, 1, 8);
+		gmal.setOnAction(e -> {
 		});
-		Button fortryd = new Button("Fortryd");
-		grid.add(fortryd, 0, 8);
-		fortryd.setOnAction(e -> {
+		Button gudvisning = new Button("Gem Udvisning");
+		grid.add(gudvisning, 2, 8);
+		gudvisning.setOnAction(e -> {
+		});
+		Button gkamp = new Button("Gem Kamp");
+		grid.add(gkamp, 3, 9);
+		gkamp.setOnAction(e -> {
+		});
+		Button luk = new Button("Luk Vinduet");
+		grid.add(luk, 2, 9);
+		luk.setOnAction(e -> {
+			opdaterkamp.close();
 		});
 
 		Scene scene = new Scene(border, 700, 500);
