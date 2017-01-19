@@ -19,7 +19,7 @@ public class OpdaterKamp {
 		GridPane grid = new GridPane();
 		border.setCenter(grid);
 		grid.setAlignment(Pos.CENTER_RIGHT);
-//		grid.setGridLinesVisible(true);
+		// grid.setGridLinesVisible(true);
 		GridPane gridtop = new GridPane();
 		border.setTop(gridtop);
 		gridtop.setAlignment(Pos.CENTER);
