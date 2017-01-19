@@ -40,30 +40,43 @@ public class OpdaterKamp {
 		TextField tude = new TextField();
 		gridtop.add(tude, 1, 2);
 
-		// Felter i center border og i grid griddet
+		// Felter i center border og i grid griddet x aksen
 		Label lmal = new Label(" Mål ");
 		grid.add(lmal, 1, 0);
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 2, 0);
 
+		//Felter i center border y aksen
+		Label hjemmehold = new Label("Hjemmehold: ");
+		grid.add(hjemmehold, 0, 1);
+		TextField thjemmeholdmal = new TextField();
+		grid.add(thjemmeholdmal, 1, 1);
+		TextField thjemmeholdudv = new TextField();
+		grid.add(thjemmeholdudv, 2, 1);
+		Label udehold = new Label("UdeHold: ");
+		grid.add(udehold, 0, 2);
+		TextField tudeholdmal = new TextField();
+		grid.add(tudeholdmal, 1, 2);
+		TextField tudeholdudv = new TextField();
+		grid.add(tudeholdudv, 2, 2);
 		Label antal = new Label("Antal: ");
-		grid.add(antal, 0, 1);
+		grid.add(antal, 0, 3);
 		TextField antalm = new TextField();
-		grid.add(antalm, 1, 1);
+		grid.add(antalm, 1, 3);
 		TextField antalu = new TextField();
-		grid.add(antalu, 2, 1);
+		grid.add(antalu, 2, 3);
 		Label tid = new Label("Tid: ");
-		grid.add(tid, 0, 2);
+		grid.add(tid, 0, 4);
 		TextField tidm = new TextField();
-		grid.add(tidm, 1, 2);
+		grid.add(tidm, 1, 4);
 		TextField tidu = new TextField();
-		grid.add(tidu, 2, 2);
+		grid.add(tidu, 2, 4);
 		Label hold = new Label("Hold: ");
-		grid.add(hold, 0, 3);
+		grid.add(hold, 0, 5);
 		TextField holdm = new TextField();
-		grid.add(holdm, 1, 3);
+		grid.add(holdm, 1, 5);
 		TextField holdu = new TextField();
-		grid.add(holdu, 2, 3);
+		grid.add(holdu, 2, 5);
 
 		// Knapper
 		Button gmal = new Button("Gem Mål");
