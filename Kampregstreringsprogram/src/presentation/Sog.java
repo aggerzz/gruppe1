@@ -10,8 +10,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class Sog {
-	public void start(Stage kampregpro) {
-		kampregpro.setTitle("SØG");
+	public void start(Stage sog) {
+		sog.setTitle("SØG");
 		
 		// Border
 		BorderPane border = new BorderPane();
@@ -27,13 +27,19 @@ public class Sog {
 		grid.add(tsog, 1, 0);
 		
 		Button ligaoversigt = new Button("Søg");
-		grid.add(ligaoversigt, 0, 2);
+		grid.add(ligaoversigt, 1, 2);
 		ligaoversigt.setOnAction(e -> {
+		});
+		
+		Button tilbage = new Button("Tilbage");
+		grid.add(tilbage, 0, 2);
+		tilbage.setOnAction(e -> {
+			sog.close();
 		});
 		
 		Scene scene = new Scene(border, 700, 500);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
-		kampregpro.setScene(scene);
-		kampregpro.show();
+		sog.setScene(scene);
+		sog.show();
 	}
 }
