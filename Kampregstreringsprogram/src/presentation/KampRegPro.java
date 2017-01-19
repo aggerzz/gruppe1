@@ -13,6 +13,7 @@ import presentation.Sog;
 
 public class KampRegPro extends Application {
 
+	
 	public void start(Stage kampregpro) {
 		kampregpro.setTitle("Velkommen til KampRegPro");
 
