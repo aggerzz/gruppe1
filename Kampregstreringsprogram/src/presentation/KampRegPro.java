@@ -7,9 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import presentation.LigaOversigt;
-import presentation.OpretKamp;
-import presentation.Sog;
 
 public class KampRegPro extends Application {
 
@@ -48,13 +45,6 @@ public class KampRegPro extends Application {
 		ligaoversigt.setOnAction(e -> {
 			LigaOversigt liga = new LigaOversigt();
 			liga.start(new Stage());
-		});
-
-		Button sog = new Button("Søg");
-		grid.add(sog, 0, 4);
-		sog.setOnAction(e -> {
-			Sog soeg = new Sog();
-			soeg.start(new Stage());
 		});
 
 		Button gkamp = new Button("Luk program");

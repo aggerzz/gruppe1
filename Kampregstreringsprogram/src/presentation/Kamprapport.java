@@ -19,6 +19,13 @@ public class Kamprapport {
 		grid.setAlignment(Pos.CENTER);
 		grid.setGridLinesVisible(true);
 
+		Button sog = new Button("Søg");
+		grid.add(sog, 0, 4);
+		sog.setOnAction(e -> {
+			Sog soeg = new Sog();
+			soeg.start(new Stage());
+		});
+		
 		Button tilbage = new Button("Tilbage");
 		grid.add(tilbage, 0, 0);
 		tilbage.setOnAction(e -> {
