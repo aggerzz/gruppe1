@@ -24,6 +24,7 @@ public class KampRegProImpl implements KampRegProInterface {
 
 	@Override
 	public void opdaterKamp(Kamp kamp) {
+		kam.opdaterKamp(kamp);
 		// TODO Auto-generated method stub.
 
 	}
