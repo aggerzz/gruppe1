@@ -15,7 +15,7 @@ import logic.KampRegProInterface;
 public class OpretKamp {
 
 	public void start(Stage opretkamp) {
-		opretkamp.setTitle("Kamp");
+		opretkamp.setTitle("Opret Kamp");
 
 		// Border
 		BorderPane border = new BorderPane();
@@ -24,6 +24,12 @@ public class OpretKamp {
 		border.setCenter(grid);
 		grid.setAlignment(Pos.CENTER);
 		grid.setGridLinesVisible(true);
+
+		GridPane gridtop = new GridPane();
+		border.setTop(gridtop);
+		gridtop.setAlignment(Pos.CENTER);
+		Label udfyld = new Label("Alle felter skal udfyldes");
+		gridtop.add(udfyld, 0, 0);
 
 		// kampid
 		Label label_kampid = new Label("Kampid: ");
@@ -71,9 +77,9 @@ public class OpretKamp {
 		grid.add(label_kampstatus, 0, 7);
 		TextField textfield_kampstatus = new TextField();
 		grid.add(textfield_kampstatus, 1, 7);
-		
-		//Knapper 
-		Button opretenkamp = new Button("OK");
+
+		// Knapper
+		Button opretenkamp = new Button("Opret Kamp");
 		grid.add(opretenkamp, 1, 8);
 		opretenkamp.setOnAction(e -> {
 			try {
@@ -104,6 +110,7 @@ public class OpretKamp {
 		Button fortryd = new Button("Fortryd");
 		grid.add(fortryd, 0, 8);
 		fortryd.setOnAction(e -> {
+			opretkamp.close();
 		});
 
 		Scene scene = new Scene(border, 700, 500);
