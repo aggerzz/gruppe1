@@ -1,15 +1,28 @@
 package presentation;
 
+import java.sql.SQLException;
+import java.util.List;
+
+import data.DataAccess;
+import data.Ligadata;
+import domain.Hold;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class LigaOversigt {
+	Ligadata ligadb;
 	public void start(Stage ligaoversigt) {
+		ligadb = new Ligadata();
 		ligaoversigt.setTitle("Liga Oversigt");
 
 		// Border
@@ -38,6 +51,18 @@ public class LigaOversigt {
 		Label ludvisninger = new Label(" Udvisninger ");
 		grid.add(ludvisninger, 8, 0);
 
+		//lav ligaoversigt liste med TableView TODO
+		
+		try {
+			grid.add(createholdtable(ligadb.visLiga_Oversigt(new DataAccess(), "2017")), 1, 1,8,8);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		
+		
+
 		Button gkamp = new Button("Luk vinduet");
 		grid.add(gkamp, 9, 0);
 		gkamp.setOnAction(e -> {
@@ -50,4 +75,16 @@ public class LigaOversigt {
 		ligaoversigt.show();
 
 	}
+private TableView <Hold> createholdtable (List<Hold> holdliste){
+	TableView <Hold> table = new TableView<Hold>();
+	ObservableList<Hold> observableholdlist = FXCollections.observableArrayList(holdliste);
+	
+	TableColumn<Hold,String> navnCol = new TableColumn<Hold,String>("Navn");
+	navnCol.setCellValueFactory(new PropertyValueFactory<Hold,String>("holdnavn"));
+	
+	table.setItems(observableholdlist);
+	table.getColumns().addAll(navnCol);
+	return table;
 }
+}
+

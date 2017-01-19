@@ -7,6 +7,11 @@ public class Hold {
 	private int ligaid;
 	private String liganavn;
 	
+	public Hold(String holdnavn,String liganavn){
+		this.holdnavn=holdnavn;
+		this.liganavn=liganavn;
+	}
+	
 
 	public String getHoldnavn() {
 		return holdnavn;
