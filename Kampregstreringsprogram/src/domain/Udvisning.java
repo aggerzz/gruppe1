@@ -3,7 +3,7 @@ package domain;
 import java.sql.Time;
 
 public class Udvisning {
-	private Kamp kampid;
+	private int kampid;
 	private String holdnavn;
 	private Time tid;
 	private int udvisning;
@@ -15,10 +15,10 @@ public class Udvisning {
 	public void setTid(Time tid) {
 		this.tid = tid;
 	}
-	public Kamp getKampid() {
+	public int getKampid() {
 		return kampid;
 	}
-	public void setKampid(Kamp kampid) {
+	public void setKampid(int kampid) {
 		this.kampid = kampid;
 	}
 	public String getHoldnavn() {

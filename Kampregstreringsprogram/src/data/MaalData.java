@@ -22,7 +22,7 @@ public class MaalData {
 	}
 	public void opdaterMaal(DataAccess access, Maal maal){
 		try(PreparedStatement statement = access.getConnection().prepareStatement("INSERT INTO maal(kampid, holdnavn, maal,tid) VALUES(?, ?, ?, ?)");){
-			statement.setInt(1,kamp.getKampid() );
+			statement.setInt(1, maal.getKampid());
 			statement.setString(2, maal.getHoldnavn());
 			statement.setInt(3, maal.getMaal());
 			statement.setTime(4, maal.getTid());

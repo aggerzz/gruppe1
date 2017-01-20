@@ -22,7 +22,7 @@ public class UdvisningData {
 	}
 	public void opdaterUdvisning(DataAccess access, Udvisning udvisning){
 		try(PreparedStatement statement = access.getConnection().prepareStatement("INSERT INTO udvisning(kampid, holdnavn, udvisning, tid)VALUES (?, ?, ?, ?)");){
-			statement.setInt(1, kamp.getKampid());
+			statement.setInt(1, udvisning.getKampid());
 			statement.setString(2, udvisning.getHoldnavn());
 			statement.setInt(3, udvisning.getUdvisning());
 			statement.setTime(4, udvisning.getTid());
