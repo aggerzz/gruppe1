@@ -1,5 +1,6 @@
 package presentation;
 
+import domain.Kamp;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,6 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import logic.KampRegProImpl;
+import logic.KampRegProInterface;
 
 public class OpdaterKamp {
 	public void start(Stage opdaterkamp) {
@@ -86,6 +89,12 @@ public class OpdaterKamp {
 		Button gudvisning = new Button("Gem Udvisning");
 		grid.add(gudvisning, 2, 8);
 		gudvisning.setOnAction(e -> {
+//			try {
+//				KampRegProInterface krpi = new KampRegProImpl();
+//				Kamp kamp = new Kamp();
+//				
+//			}
+			
 		});
 		Button luk = new Button("Luk Vinduet");
 		grid.add(luk, 1, 9);
