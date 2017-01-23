@@ -85,6 +85,15 @@ public class OpdaterKamp {
 		Button gmal = new Button("Gem Mål");
 		grid.add(gmal, 1, 8);
 		gmal.setOnAction(e -> {
+			try {
+				KampRegProInterface krpi = new KampRegProImpl();
+				Kamp kamp = new Kamp();
+				
+			} catch (NumberFormatException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				Fejlvindue fejlvindue = new Fejlvindue();
+				fejlvindue.start(new Stage());}
 		});
 		Button gudvisning = new Button("Gem Udvisning");
 		grid.add(gudvisning, 2, 8);
