@@ -89,7 +89,13 @@ public class OpdaterKamp {
 				KampRegProInterface krpi = new KampRegProImpl();
 				Kamp kamp = new Kamp();
 				int maalhjemmehold = Integer.parseInt(thjemmeholdmal.getText());
-				kamp.setHjemmehold_maal(maalhjemmehold); //skal det hede Hjemmehold_maal som der står i KampData.java eller hvad?
+				kamp.setHjemmehold_maal(maalhjemmehold); 
+				int maaludehold = Integer.parseInt(tudeholdmal.getText());
+				kamp.setUdehold_maal(maaludehold);
+				kamp.setHjemmehold(thjem.getText());
+				int idkamp = Integer.parseInt(tkampid.getText());
+				kamp.setKampid(idkamp);
+				kamp.setUdehold(tude.getText());
 			} catch (NumberFormatException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -99,11 +105,22 @@ public class OpdaterKamp {
 		Button gudvisning = new Button("Gem Udvisning");
 		grid.add(gudvisning, 2, 8);
 		gudvisning.setOnAction(e -> {
-//			try {
-//				KampRegProInterface krpi = new KampRegProImpl();
-//				Kamp kamp = new Kamp();
-//				
-//			}
+			try {
+				KampRegProInterface krpi = new KampRegProImpl();
+				Kamp kamp = new Kamp();
+				kamp.setHjemmehold(thjem.getText());
+				int idkamp = Integer.parseInt(tkampid.getText());
+				kamp.setKampid(idkamp);
+				kamp.setUdehold(tude.getText());
+				int udvisningudehold = Integer.parseInt(tudeholdudv.getText());
+				kamp.setUdehold_udvisning(udvisningudehold);
+				int udvisninghjemmehold = Integer.parseInt(thjemmeholdudv.getText());
+				kamp.setHjemmehold_udvisning(udvisninghjemmehold);
+			} catch (NumberFormatException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				Fejlvindue fejlvindue = new Fejlvindue();
+				fejlvindue.start(new Stage());}
 			
 		});
 		Button luk = new Button("Luk Vinduet");
