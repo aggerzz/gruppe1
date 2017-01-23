@@ -1,10 +1,10 @@
 package presentation;
 
-import java.sql.Time;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 import domain.Kamp;
+import domain.Maal;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -77,7 +77,6 @@ public class OpdaterKamp {
 		TextField tidm = new TextField();
 		grid.add(tidm, 1, 4);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh-mm-ss");
-		tidm.setText(LocalTime.valueof().formatter(formatter));
 		TextField tidu = new TextField();
 		grid.add(tidu, 2, 4);
 		// TODO Tid
@@ -95,6 +94,7 @@ public class OpdaterKamp {
 			try {
 				KampRegProInterface krpi = new KampRegProImpl();
 				Kamp kamp = new Kamp();
+				Maal maal = new Maal(); 
 				int maalhjemmehold = Integer.parseInt(thjemmeholdmal.getText());
 				kamp.setHjemmehold_maal(maalhjemmehold); 
 				int maaludehold = Integer.parseInt(tudeholdmal.getText());
@@ -103,6 +103,8 @@ public class OpdaterKamp {
 				int idkamp = Integer.parseInt(tkampid.getText());
 				kamp.setKampid(idkamp);
 				kamp.setUdehold(tude.getText());
+				LocalTime tidm1 = LocalTime.parse(tidm.getText(), formatter); 
+				maal.setTid(tidm1);
 				//noget med tid TODO
 				
 			} catch (NumberFormatException e1) {

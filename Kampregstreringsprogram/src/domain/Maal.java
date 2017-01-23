@@ -1,18 +1,18 @@
 package domain;
 
-import java.sql.Time;
+import java.time.LocalTime;
 
 public class Maal {
 	private int kampid;
 	private String holdnavn;
-	private Time tid;
+	private LocalTime tid;
 	private int maal;
 
-	public Time getTid() {
+	public LocalTime getTid() {
 		return tid;
 	}
 
-	public void setTid(Time tid) {
+	public void setTid(LocalTime tid) {
 		this.tid = tid;
 	}
 
