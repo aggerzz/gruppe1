@@ -96,8 +96,8 @@ public class OpdaterKamp {
 				int idkamp = Integer.parseInt(tkampid.getText());
 				kamp.setKampid(idkamp);
 				kamp.setUdehold(tude.getText());
+				//noget med tid TODO
 			} catch (NumberFormatException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 				Fejlvindue fejlvindue = new Fejlvindue();
 				fejlvindue.start(new Stage());}
@@ -116,8 +116,8 @@ public class OpdaterKamp {
 				kamp.setUdehold_udvisning(udvisningudehold);
 				int udvisninghjemmehold = Integer.parseInt(thjemmeholdudv.getText());
 				kamp.setHjemmehold_udvisning(udvisninghjemmehold);
+				// noget med tid
 			} catch (NumberFormatException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 				Fejlvindue fejlvindue = new Fejlvindue();
 				fejlvindue.start(new Stage());}
