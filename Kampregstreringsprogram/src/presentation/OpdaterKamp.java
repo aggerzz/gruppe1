@@ -1,5 +1,9 @@
 package presentation;
 
+import java.sql.Time;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 import domain.Kamp;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -72,8 +76,11 @@ public class OpdaterKamp {
 		grid.add(tid, 0, 4);
 		TextField tidm = new TextField();
 		grid.add(tidm, 1, 4);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh-mm-ss");
+		tidm.setText(LocalTime.valueof().formatter(formatter));
 		TextField tidu = new TextField();
 		grid.add(tidu, 2, 4);
+		// TODO Tid
 		Label hold = new Label("Hold: ");
 		grid.add(hold, 0, 5);
 		TextField holdm = new TextField();
@@ -97,6 +104,7 @@ public class OpdaterKamp {
 				kamp.setKampid(idkamp);
 				kamp.setUdehold(tude.getText());
 				//noget med tid TODO
+				
 			} catch (NumberFormatException e1) {
 				e1.printStackTrace();
 				Fejlvindue fejlvindue = new Fejlvindue();
