@@ -1,5 +1,6 @@
 package presentation;
 
+import java.sql.Time;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
@@ -103,7 +104,7 @@ public class OpdaterKamp {
 				int idkamp = Integer.parseInt(tkampid.getText());
 				kamp.setKampid(idkamp);
 				kamp.setUdehold(tude.getText());
-				LocalTime tidm1 = LocalTime.parse(tidm.getText(), formatter); 
+				Time tidm1 = Time.valueOf(tidm.getText()); 
 				maal.setTid(tidm1);
 				//noget med tid TODO
 				
