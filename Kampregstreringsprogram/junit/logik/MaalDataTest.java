@@ -17,7 +17,7 @@ public class MaalDataTest {
 		maal.setKampid(1);
 		maal.setHoldnavn("FCM");
 		maal.setMaal(1);
-		maal.setTid(Time.valueOf("00:02:15"));
+		maal.setTid(Time.valueOf("00:02:45"));
 		kpri.opdaterMaal(maal);
 		//fail("Not yet implemented");
 	}
