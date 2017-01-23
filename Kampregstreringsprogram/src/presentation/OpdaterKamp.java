@@ -88,7 +88,8 @@ public class OpdaterKamp {
 			try {
 				KampRegProInterface krpi = new KampRegProImpl();
 				Kamp kamp = new Kamp();
-				
+				int maalhjemmehold = Integer.parseInt(thjemmeholdmal.getText());
+				kamp.setHjemmehold_maal(maalhjemmehold); //skal det hede Hjemmehold_maal som der står i KampData.java eller hvad?
 			} catch (NumberFormatException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
