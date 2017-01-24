@@ -77,7 +77,7 @@ public class OpdaterKamp {
 		grid.add(tid, 0, 4);
 		TextField tidm = new TextField();
 		grid.add(tidm, 1, 4);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh-mm-ss");
+		
 		TextField tidu = new TextField();
 		grid.add(tidu, 2, 4);
 		// TODO Tid
@@ -106,7 +106,13 @@ public class OpdaterKamp {
 				kamp.setUdehold(tude.getText());
 				Time tidm1 = Time.valueOf(tidm.getText()); 
 				maal.setTid(tidm1);
-				//noget med tid TODO
+				maal.setKampid(idkamp);
+				int antalmaal = Integer.parseInt(antalm.getText());
+				maal.setMaal(antalmaal);
+				maal.setHoldnavn(holdm.getText());
+				krpi.opdaterKamp(kamp);
+				krpi.opdaterMaal(maal);
+				
 				
 			} catch (NumberFormatException e1) {
 				e1.printStackTrace();
