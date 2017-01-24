@@ -4,17 +4,20 @@ import java.util.List;
 
 import data.KampData;
 import data.MaalData;
+import data.SogData;
 import data.UdvisningData;
 import domain.Hold;
 import domain.Kamp;
 import domain.Liga;
 import domain.Maal;
+import domain.Soeg;
 import domain.Udvisning;
 
 public class KampRegProImpl implements KampRegProInterface {
 	private KampData kam = new KampData();
 	private MaalData md = new MaalData(); 
 	private UdvisningData ud = new UdvisningData(); 
+	private SogData sd = new SogData();
 
 	@Override
 	public Kamp opretKamp(Kamp kamp) {
@@ -62,6 +65,12 @@ public class KampRegProImpl implements KampRegProInterface {
 	@Override
 	public Hold visLiga_Oversigt(String liganavn) {
 		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Soeg> sogListe(Soeg sog) {
+		sd.sogListe(sog);
 		return null;
 	}
 

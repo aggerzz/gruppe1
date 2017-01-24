@@ -6,6 +6,7 @@ import domain.Hold;
 import domain.Kamp;
 import domain.Liga;
 import domain.Maal;
+import domain.Soeg;
 import domain.Udvisning;
 
 public interface KampRegProInterface {
@@ -16,4 +17,5 @@ public interface KampRegProInterface {
 	public void opdaterMaal(Maal maal);
 	public void opdaterUdvisning(Udvisning udvisning);
 	public Hold visLiga_Oversigt(String liganavn);
+	public List<Soeg> sogListe(Soeg sog);
 }
