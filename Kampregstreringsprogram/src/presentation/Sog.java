@@ -17,11 +17,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import logic.KampRegProImpl;
-import logic.KampRegProInterface;
 
 public class Sog {
-	public void start(Stage sog) {
-		sog.setTitle("SØG");
+	List<Soeg> holdlist;
+	private ObservableList<Soeg> observablesog;
+	TableView<Soeg> table = new TableView<Soeg>();
+	public void start(Stage soeg) {
+		soeg.setTitle("SØG");
 
 		// Border
 		BorderPane border = new BorderPane();
@@ -31,31 +33,30 @@ public class Sog {
 		grid.setAlignment(Pos.CENTER);
 		grid.setGridLinesVisible(true);
 
-		Label lsog = new Label("Søg på noget: ");
-		grid.add(lsog, 0, 0);
-		TextField tsog = new TextField();
-		grid.add(tsog, 1, 0);
-
+		Label lholdnavn = new Label("Søg på holdnavn: ");
+		grid.add(lholdnavn, 0, 1);
+		TextField tholdnavn = new TextField();
+		grid.add(tholdnavn, 1, 1);
+		
 		Button ligaoversigt = new Button("Søg");
 		grid.add(ligaoversigt, 1, 2);
 		ligaoversigt.setOnAction(e -> {
+			Soeg hold = new Soeg();
+			hold.setHoldnavn(tholdnavn.getText());
+			
+			KampRegProImpl logic = new KampRegProImpl();
+			holdlist = logic.sogListe(hold);
+			
+			observablesog = FXCollections.observableArrayList(holdlist);
+			table.setItems(observablesog);
+			soeg.show();
 		});
 
 		Button tilbage = new Button("Tilbage");
 		grid.add(tilbage, 0, 2);
 		tilbage.setOnAction(e -> {
-			sog.close();
+			soeg.close();
 		});
-
-		Scene scene = new Scene(border, 700, 500);
-		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
-		sog.setScene(scene);
-		sog.show();
-	}
-
-	private TableView<Soeg> createsogtable(List<Soeg> sogListe) {
-		TableView<Soeg> table = new TableView<Soeg>();
-		ObservableList<Soeg> observeSog = FXCollections.observableArrayList(sogListe);
 
 		TableColumn<Soeg, String> holdid = new TableColumn<Soeg, String>("Holdid");
 		holdid.setCellValueFactory(new PropertyValueFactory<Soeg, String>("holdid"));
@@ -63,9 +64,13 @@ public class Sog {
 		TableColumn<Soeg, String> holdnavn = new TableColumn<Soeg, String>("Holdnavn");
 		holdnavn.setCellValueFactory(new PropertyValueFactory<Soeg, String>("holdnavn"));
 
-		table.setItems(observeSog);
 		grid.add(table, 0,3);
-		// table.getColumns().addAll(holdid, holdnavn);
-		return table;
+		table.getColumns().addAll(holdid, holdnavn);
+
+		Scene scene = new Scene(border, 700, 500);
+		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
+		soeg.setScene(scene);
+		soeg.show();
 	}
+
 }

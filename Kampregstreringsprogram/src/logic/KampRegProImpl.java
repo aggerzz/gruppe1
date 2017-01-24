@@ -70,8 +70,7 @@ public class KampRegProImpl implements KampRegProInterface {
 
 	@Override
 	public List<Soeg> sogListe(Soeg sog) {
-		sd.sogListe(sog);
-		return null;
+		return sd.sogListe(sog);
 	}
 
 	

@@ -14,11 +14,11 @@ public class SogData {
 	public List<Soeg> sogListe(Soeg sog) {
 		List<Soeg> list = new ArrayList<>();
 		try (Connection connection = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/mydb", "SA", "");
-				PreparedStatement statement = connection.prepareStatement(
-						"SELECT holdid, holdnavn FROM hold WHERE (holdid) LIKE ? and (holdnavn) LIKE ?");) {
+				PreparedStatement statement = connection
+						.prepareStatement("SELECT * FROM hold WHERE upper(holdnavn) like ?");) {
 
-			statement.setString(1, "%" + sog.getHoldid() + "%");
-			statement.setString(2, "%" + sog.getHoldnavn() + "%");
+			
+			statement.setString(1, "%" + sog.getHoldnavn().toUpperCase() + "%");
 
 			try (ResultSet resultset = statement.executeQuery();) {
 

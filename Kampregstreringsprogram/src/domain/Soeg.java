@@ -18,4 +18,6 @@ public class Soeg {
 		this.holdnavn = holdnavn;
 	}
 
+	
+
 }
