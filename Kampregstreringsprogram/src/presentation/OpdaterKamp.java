@@ -1,11 +1,10 @@
 package presentation;
 
 import java.sql.Time;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 import domain.Kamp;
 import domain.Maal;
+import domain.Udvisning;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -94,23 +93,21 @@ public class OpdaterKamp {
 		gmal.setOnAction(e -> {
 			try {
 				KampRegProInterface krpi = new KampRegProImpl();
-				Kamp kamp = new Kamp();
 				Maal maal = new Maal(); 
-				int maalhjemmehold = Integer.parseInt(thjemmeholdmal.getText());
-				kamp.setHjemmehold_maal(maalhjemmehold); 
-				int maaludehold = Integer.parseInt(tudeholdmal.getText());
-				kamp.setUdehold_maal(maaludehold);
-				kamp.setHjemmehold(thjem.getText());
+//				int maalhjemmehold = Integer.parseInt(thjemmeholdmal.getText());
+//				kamp.setHjemmehold_maal(maalhjemmehold); 
+//				int maaludehold = Integer.parseInt(tudeholdmal.getText());
+//				kamp.setUdehold_maal(maaludehold);
+//				kamp.setHjemmehold(thjem.getText());
 				int idkamp = Integer.parseInt(tkampid.getText());
-				kamp.setKampid(idkamp);
-				kamp.setUdehold(tude.getText());
+//				kamp.setKampid(idkamp);
+//				kamp.setUdehold(tude.getText());
 				Time tidm1 = Time.valueOf(tidm.getText()); 
 				maal.setTid(tidm1);
 				maal.setKampid(idkamp);
 				int antalmaal = Integer.parseInt(antalm.getText());
 				maal.setMaal(antalmaal);
 				maal.setHoldnavn(holdm.getText());
-				krpi.opdaterKamp(kamp);
 				krpi.opdaterMaal(maal);
 				
 				
@@ -124,16 +121,24 @@ public class OpdaterKamp {
 		gudvisning.setOnAction(e -> {
 			try {
 				KampRegProInterface krpi = new KampRegProImpl();
-				Kamp kamp = new Kamp();
-				kamp.setHjemmehold(thjem.getText());
+				Udvisning udvisning = new Udvisning();
+//				kamp.setHjemmehold(thjem.getText());
 				int idkamp = Integer.parseInt(tkampid.getText());
-				kamp.setKampid(idkamp);
-				kamp.setUdehold(tude.getText());
-				int udvisningudehold = Integer.parseInt(tudeholdudv.getText());
-				kamp.setUdehold_udvisning(udvisningudehold);
-				int udvisninghjemmehold = Integer.parseInt(thjemmeholdudv.getText());
-				kamp.setHjemmehold_udvisning(udvisninghjemmehold);
-				// noget med tid
+//				kamp.setKampid(idkamp);
+//				kamp.setUdehold(tude.getText());
+//				int udvisningudehold = Integer.parseInt(tudeholdudv.getText());
+//				kamp.setUdehold_udvisning(udvisningudehold);
+//				int udvisninghjemmehold = Integer.parseInt(thjemmeholdudv.getText());
+//				kamp.setHjemmehold_udvisning(udvisninghjemmehold);
+				Time tidu1 = Time.valueOf(tidu.getText());
+				udvisning.setTid(tidu1);
+				udvisning.setKampid(idkamp);
+				int antaludvisning = Integer.parseInt(antalu.getText());
+				udvisning.setUdvisning(antaludvisning);
+				udvisning.setHoldnavn(holdu.getText());
+				krpi.opdaterUdvisning(udvisning);
+				
+				
 			} catch (NumberFormatException e1) {
 				e1.printStackTrace();
 				Fejlvindue fejlvindue = new Fejlvindue();
@@ -148,6 +153,21 @@ public class OpdaterKamp {
 		Button gkamp = new Button("Gem Kamp");
 		grid.add(gkamp, 2, 9);
 		gkamp.setOnAction(e -> {
+			KampRegProInterface krpi = new KampRegProImpl();
+			Kamp kamp = new Kamp();
+			kamp.setHjemmehold(thjem.getText());
+			int idkamp = Integer.parseInt(tkampid.getText());
+			kamp.setKampid(idkamp);
+			kamp.setUdehold(tude.getText());
+			int udvisningudehold = Integer.parseInt(tudeholdudv.getText());
+			kamp.setUdehold_udvisning(udvisningudehold);
+			int udvisninghjemmehold = Integer.parseInt(thjemmeholdudv.getText());
+			kamp.setHjemmehold_udvisning(udvisninghjemmehold);
+			int maalhjemmehold = Integer.parseInt(thjemmeholdmal.getText());
+			kamp.setHjemmehold_maal(maalhjemmehold); 
+			int maaludehold = Integer.parseInt(tudeholdmal.getText());
+			kamp.setUdehold_maal(maaludehold);
+			krpi.opdaterKamp(kamp);
 		});
 
 		Scene scene = new Scene(border, 700, 500);
