@@ -31,7 +31,7 @@ public class Kamprapport {
 		GridPane gridtop = new GridPane();
 		border.setTop(gridtop);
 		gridtop.setAlignment(Pos.CENTER);
-		gridtop.setGridLinesVisible(true);
+		gridtop.setGridLinesVisible(false);
 		// GridPane gridcenter = new GridPane();
 		// border.setCenter(gridcenter);
 		// gridcenter.setGridLinesVisible(true);
@@ -45,6 +45,7 @@ public class Kamprapport {
 
 		TextField sogkamp = new TextField();
 		gridtop.add(sogkamp, 0, 0);
+		sogkamp.setId("sogkamp");
 
 		Button sog = new Button("Søg i kamprapport");
 		gridtop.add(sog, 1, 0);

@@ -24,5 +24,12 @@
 	-fx-text-alignment: center;
 	-fx-background-color: #e23636;
 	-fx-text-fill: white;
-	-fx-border-color: #422727;
+	-fx-border-color: #820002;
+	-fx-border-radius: 5, 5, 5, 5;
+}
+#sogkamp{
+	-fx-min-height: 50.0px;
+	-fx-min-width: 150.0px;
+	-fx-max-height: 200.0px;
+	-fx-max-width: 300.0px;
 }

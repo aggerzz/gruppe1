@@ -18,7 +18,7 @@ public class Fejlvindue {
 	GridPane grid = new GridPane();
 	border.setCenter(grid);
 	grid.setAlignment(Pos.CENTER);
-	grid.setGridLinesVisible(true);
+	grid.setGridLinesVisible(false);
 	
 	Label lhjemmehold = new Label("Der opstod en fejl. \nVær sikker på at du har udfyldt \nalle felter korrekt og prøv igen");
 	grid.add(lhjemmehold, 0,0 );

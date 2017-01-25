@@ -23,7 +23,7 @@ public class OpretKamp {
 		GridPane grid = new GridPane();
 		border.setCenter(grid);
 		grid.setAlignment(Pos.CENTER);
-		grid.setGridLinesVisible(true);
+		grid.setGridLinesVisible(false);
 
 		GridPane gridtop = new GridPane();
 		border.setTop(gridtop);
@@ -108,7 +108,7 @@ public class OpretKamp {
 			}
 		});
 		Button fortryd = new Button("Fortryd");
-		grid.add(fortryd, 0, 8);
+		grid.add(fortryd, 1, 9);
 		fortryd.setOnAction(e -> {
 			opretkamp.close();
 		});
