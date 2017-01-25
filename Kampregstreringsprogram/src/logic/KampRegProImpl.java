@@ -18,6 +18,7 @@ public class KampRegProImpl implements KampRegProInterface {
 	private MaalData md = new MaalData(); 
 	private UdvisningData ud = new UdvisningData(); 
 	private SogData sd = new SogData();
+	private KampData sk = new KampData();
 
 	@Override
 	public Kamp opretKamp(Kamp kamp) {
@@ -73,5 +74,9 @@ public class KampRegProImpl implements KampRegProInterface {
 		return sd.sogListe(sog);
 	}
 
+	@Override
+	public List<Kamp> sogKampe(Kamp kamp) {
+		return sk.sogKampe(kamp);
+	}
 	
 }

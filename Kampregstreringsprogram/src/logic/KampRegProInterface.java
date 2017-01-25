@@ -18,4 +18,5 @@ public interface KampRegProInterface {
 	public void opdaterUdvisning(Udvisning udvisning);
 	public Hold visLiga_Oversigt(String liganavn);
 	public List<Soeg> sogListe(Soeg sog);
+	public List<Kamp> sogKampe(Kamp kamp);
 }
